@@ -1,0 +1,1 @@
+web: cd ./stocksapi && npm install && node server.js
