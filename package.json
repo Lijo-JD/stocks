@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd ./stocksapi && npm install && node server.js",
     "build": "cd ./stocksreact && npm run build",
-    "install-client": "cd ./stocksreact && npm install",
+    "install-client": "cd ./stocksreact && npm install react-search-autocomplete --legacy-peer-deps && npm install",
     "heroku-postbuild": "npm run install-client && npm run build"
   },
   "author": "",

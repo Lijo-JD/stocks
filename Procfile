@@ -1,1 +1,1 @@
-web: cd ./stocksapi && npm install && node server.js
+web: npm run heroku-postbuild && npm start
