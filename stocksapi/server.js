@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('./stocksreact/build'));
+    app.use(express.static('../stocksreact/build'));
 }
 
 app.use('/login', login);

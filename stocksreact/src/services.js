@@ -11,6 +11,6 @@ export const AuthService = () => {
 
 export const logout = () => {
   localStorage.removeItem("stocks_token");
-  history.push("/login");
+  history.push("");
   window.location.reload();
 };
