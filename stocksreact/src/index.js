@@ -14,7 +14,7 @@ import { ToastContainer } from "react-toastify";
 
 const store = createStore(AppReducer, applyMiddleware(thunk));
 
-Axios.defaults.baseURL = "http://localhost:6060";
+Axios.defaults.baseURL = "https://stark-reaches-31057.herokuapp.com/";
 
 Axios.interceptors.request.use((config) => {
   const token = localStorage.getItem("stocks_token");
