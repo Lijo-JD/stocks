@@ -6,7 +6,7 @@ const login = require('./routes/loginRoutes/login');
 const stocks = require('./routes/stocksRoutes/stocks');
 const cors = require('cors');
 
-const PORT = process.env.PORT || 6060;
+let PORT = process.env.PORT || 6060;
 let HOST = 'localhost';
 
 app.use(bodyParser.json());
