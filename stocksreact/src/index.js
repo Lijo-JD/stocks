@@ -14,7 +14,8 @@ import { ToastContainer } from "react-toastify";
 
 const store = createStore(AppReducer, applyMiddleware(thunk));
 
-Axios.defaults.baseURL = `http://localhost:${process.env.REACT_APP_PORT || 6060}`;
+// Axios.defaults.baseURL = `http://localhost:${process.env.PORT || 6060}`;
+Axios.defaults.baseURL = '';
 
 Axios.interceptors.request.use((config) => {
   const token = localStorage.getItem("stocks_token");
