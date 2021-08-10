@@ -8,6 +8,8 @@ import history from "./history";
 function App() {
   if (!AuthService()) {
     history.push("/login");
+  } else {
+    history.push("/stocks");
   }
   return (
     <Router history={history}>

@@ -44,7 +44,8 @@ const Login = () => {
     }
   }, [error]);
 
-  const loginMethod = () => {
+  const loginMethod = (e) => {
+    e.preventDefault();
     if (username.length === 0 || password.length === 0) {
       toast.warn("Please enter both fields", { autoClose: 5000 });
     } else {
@@ -57,7 +58,7 @@ const Login = () => {
       <NavBar />
       <Container>
         <div className="d-flex justify-content-center align-middle">
-          <Form>
+          <Form onSubmit={loginMethod}>
             <FloatingLabel className="mb-3" label="Username">
               <Form.Control
                 type="text"
@@ -74,8 +75,7 @@ const Login = () => {
             </FloatingLabel>
             <Button
               variant="primary"
-              type="button"
-              onClick={loginMethod}
+              type="submit"
               disabled={loading}
             >
               {loading && (
