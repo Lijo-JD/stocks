@@ -3,7 +3,11 @@ const router = require('express').Router();
 const jwt = require('jsonwebtoken');
 const connection = require('../../db').promise();
 
-router.post('', async (req, res, next) => {
+router.get("/", (req, res, next) => {
+    res.redirect("/");
+})
+
+router.post('/', async (req, res, next) => {
     const username = req.body.username;
     const password = req.body.password;
     const response = await connection.execute("SELECT `iduserlogin` FROM `" + process.env.DB + "`.`userlogin` WHERE `username` = ? AND `password` = ?", [username, password]);
